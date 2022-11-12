@@ -5,7 +5,7 @@ file = r"12_04_01_E_공중화장실정보.csv"
 df= pd.read_csv(file, encoding='cp949', usecols = ["WGS84위도", "WGS84경도","소재지도로명주소"]) #소재지도로명주소, 위도, 경도 데이터 추출
 #소재지도로명 주소를 추출하는 이유는 남구데이터를 뽑기위하여 #cp949로 인코딩 한 이유는 utf-8로 이 파일을 읽지못하였기 때문
 
-df=df.rename(columns={"소재지도로명주소":"div태그","WHS84위도":"위도","WHS84경도":"경도"}) #제목변경
+df=df.rename(columns={"소재지도로명주소":"div태그","WGS84위도":"위도","WGS84경도":"경도"}) #제목변경
 df = df.dropna(axis=0) # 경도, 위도 값 없는 항목 제거
 
 is_namgu = df["div태그"].str.contains("남구") #소재지도로명 주소에 남구가 포함된 데이터들을 추출

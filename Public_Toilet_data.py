@@ -23,4 +23,4 @@ df=df[new_col]  #순서 재배치
 
 df=df.drop_duplicates() # 중복 제거
 df.to_csv("data.csv",index=False)
-#####
+######
